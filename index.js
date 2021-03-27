@@ -19,7 +19,7 @@ function createMenuItem(name, price, category){
     return {name, price, category};
 }
 
-console.log("Task 1a:", createMenuItem("tacos", 8, "Lunch"));
+//console.log("Task 1a: ", createMenuItem("tacos", 8, "Lunch"));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Invoke your function!
@@ -35,7 +35,7 @@ const eggs = createMenuItem("eggs", 2, "Breakfast");
 const pizza = createMenuItem("pizza", 5, "Lunch");
 const salad = createMenuItem("salad", 8, "Dinner");
 
-console.log("Task 1b: ", eggs, pizza, salad);
+//console.log("Task 1b: ", eggs, pizza, salad);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -55,10 +55,19 @@ export const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
-  /*Your code here*/
+  discount: function(personsRole){
+    let discountedPrice = 0;
+    if(personsRole === "teacher" || personsRole === "student"){
+      discountedPrice = this.price - this.price * 0.25;
+    }else{
+      discountedPrice = this.price - this.price * 0.10;
+    }
+    return discountedPrice;
+  }
 }
 
-
+//console.log("Task 2 Test 1: ", burger.discount("student"));
+//console.log("Task 2 Test 2: ", burger.discount("parent"));
 
 ///////////////Reviews (MVP)///////////////////
 const reviews = [
