@@ -86,8 +86,8 @@ Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
 */
 
-console.log("Task 3: ", reviews[5].feedback);
-
+//Task below commented out for ease of terminal use
+//console.log("Task 3: ", reviews[5].feedback);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -96,6 +96,16 @@ Using the reviews array above do the following: (no function needed)
   2. log the whole array to the console, make sure the new review is inside of it   
 */
 
+const fictitiousReview = {
+  name: "Sean",
+  rating: 5,
+  feedback: "Lambda School is an awesome place to learn"
+}
+
+reviews.push(fictitiousReview);
+
+//Task below commented out for ease of terminal use
+//console.log("Task 4: ", reviews);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
