@@ -198,11 +198,28 @@ Use the getLongReviews function below to do the following:
   ]
 */
 
-function getLongReviews(/* code here */) {
-    /* code here */
+function getLongReviews(array) {
+    let longReviewsArray = [];
+    for(let i = 0; i < array.length; i++){
+      /*
+      I found the code for the next three lines online. They aren't necessary for this particular reviews array, but is added so that if the feedback string were to have any additional spaces the string will be "cleaned" prior to being counted with array[i].feedback.split(" ").length and therefore give an accurate count of the words in feedback. 
+      First line - removes spaces from the start and end of string
+      Second line - reduces instances of multiple spaces in a row to a single space
+      Third line - excludes any spaces preceeding line breaks
+      */
+      array[i].feedback = array[i].feedback.replace(/(^\s*)|(\s*$)/gi,"");
+      array[i].feedback = array[i].feedback.replace(/[ ]{2,}/gi," ");
+      array[i].feedback = array[i].feedback.replace(/\n /,"\n");
+      if(array[i].feedback.split(" ").length > 15){
+        longReviewsArray.push(array[i]);
+      }
+    }
+    return longReviewsArray;
   }
   
+  //console.log("Stretch 2: ", getLongReviews(reviews));
 
+  
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 3: 💪💪💪💪💪💪💪💪💪💪 
 This stretch goal does not use the reviews data!  You create your own object in this stretch goal.
 
