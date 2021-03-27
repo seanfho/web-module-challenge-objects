@@ -16,12 +16,7 @@ The function should:
 */
 
 function createMenuItem(name, price, category){
-    const newMenuItem = {
-      name: name,
-      price: price,
-      category: category
-    };
-    return newMenuItem;
+    return {name, price, category};
 }
 
 console.log("Task 1a:", createMenuItem("tacos", 8, "Lunch"));
@@ -36,6 +31,11 @@ Test your createMenuItems function by doing the following:
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
 
+const eggs = createMenuItem("eggs", 2, "Breakfast");
+const pizza = createMenuItem("pizza", 5, "Lunch");
+const salad = createMenuItem("salad", 8, "Dinner");
+
+console.log("Task 1b: ", eggs, pizza, salad);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
