@@ -219,7 +219,7 @@ function getLongReviews(array) {
   
   //console.log("Stretch 2: ", getLongReviews(reviews));
 
-  
+
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 3: 💪💪💪💪💪💪💪💪💪💪 
 This stretch goal does not use the reviews data!  You create your own object in this stretch goal.
 
@@ -238,11 +238,20 @@ Use the carMaker function below to do the following:
 */
 
 
-function carMaker(/* code here */) {
-    /* code here */
-    
+function carMaker(odometerValue){
+    return {
+    odometerValue,
+    drive(distance){
+    odometerValue = odometerValue + distance;
+    return odometerValue;
+    }
+  };
 }
 
+const car1 = carMaker(10);
+
+console.log("Stretch 3 Test 1: ", car1);
+console.log("Stretch 3 Test 2: ", car1.drive(100));
 
 /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑 */
 function foo(){
